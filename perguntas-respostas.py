@@ -35,16 +35,25 @@ acertos = 0
 
 for options in questions  :
     print(options['question'])
+
     for option in options['options']:
         print(option)
+
     answer = input('Digite o número da resposta correta: ')
+
+    if not answer.isdigit():
+        print("Entrada inválida! Digite apenas números (1, 2 ou 3).")
+        continue
+    
     if answer == options['correct_answer']:
         print('Resposta correta!\n')
+
     else:
         print('Resposta incorreta. A resposta correta é:', options['correct_answer'], '\n')
 
     if answer == options ['correct_answer']:
         acertos += 1
+
     else : 
         acertos += 0 
 
